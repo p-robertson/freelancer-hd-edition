@@ -56,7 +56,8 @@ Freelancer.exe. Base: Default No-CD EXE.
 08D997: Hex 55 -> 00 = Show all group members on the nav map #2. ~BC46
 096325: Hex 40 3E -> CC 2E = Group member's NAV position refreshes every second #1. ~Venemon
 096338: Hex 40 3E -> CC 2E = Group member's NAV position refreshes every second #2. ~Venemon
-0A8004: Hex 05 -> 1A = Shows the current worth in Multiplayer. ~adoxa
+0A8004: Hex 05 -> 1A = Shows the current worth in Multiplayer #1. ~adoxa
+0A8180: Hex 18 -> 05 = Shows the current worth in Multiplayer #2. ~BC46 & adoxa
 0AB150: UInt32 393279 -> 459752 = Changes the IDS of the first section in the game credits to an extended IDS in hderesources.dll which contains the HDE credits. ~BC46
 0B1375: Int8 32 -> 120 = Increases the maximum value for the "TOTAL SOUND ELEMENTS" slider in the audio options menu. ~adoxa
 0B1377: Int8 8 -> 32 = Increases the minimum value for the "TOTAL SOUND ELEMENTS" slider in the audio options menu. ~adoxa
