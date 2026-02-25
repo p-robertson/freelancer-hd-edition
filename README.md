@@ -113,7 +113,7 @@ Have something to contribute to make the mod even better? Feel free to create a 
 - [crosire](https://github.com/crosire)
   - [ReShade](https://reshade.me/)
 - [Daniel Stenberg](https://github.com/bagder)
-  - [curl](https://github.com/curl/curl)
+  - [libcurl](https://github.com/curl/curl)
 - [DAVENAT0R](https://www.moddb.com/members/davenator1)
   - [Flat Interface](https://www.moddb.com/games/freelancer/addons/freelancer-flat-interface)
   - [Flat UI Icons V2](https://www.moddb.com/games/freelancer/addons/flat-ui-icons-v2)
@@ -195,7 +195,7 @@ Have something to contribute to make the mod even better? Feel free to create a 
   - Emissive Manufacturing Platform windows
 - [Thaddeus](https://github.com/thaddeus-ex)
   - Solar and weapon model fixes
-- [The Starport](https://github.com/TheStarport)
+- [The Starport](https://github.com/TheStarport) & FLHook contributors
   - [FLHook](https://github.com/TheStarport/FLHook)
 - [Venemon](https://www.moddb.com/members/venemon)
   - [Dynamic Target Screen plugin](https://github.com/FLHDE/DynamicTargetScreen)
