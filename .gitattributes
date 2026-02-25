@@ -3,3 +3,4 @@
 *.thn linguist-language=Lua
 
 *.ini text eol=crlf
+*.fl text eol=crlf
