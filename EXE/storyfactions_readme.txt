@@ -1,6 +1,6 @@
 			  Story Factions by Jason Hood
 
-				  Version 1.00
+				  Version 1.01
 
 
 Story Factions allows customization of the factions that are excluded from the
@@ -11,5 +11,5 @@ section of EXE\dacom.ini.  Then copy STORYFACTIONS.INI to the DATA directory and
 edit it as required.
 
 
-Jason Hood, 23 March, 2010.
-http://freelancer.adoxa.cjb.net/
+Jason Hood, 25 April, 2026.
+http://adoxa.altervista.org/freelancer/
