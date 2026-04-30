@@ -202,8 +202,6 @@ Have something to contribute to make the mod even better? Feel free to create a 
   - Reverse engineering
 - [Why485](https://github.com/brihernandez)
   - [The Big Huge Effects Pack](https://the-starport.net/freelancer/forum/viewtopic.php?topic_id=1317)
-- [w0dk4](https://github.com/chaosgrid)
-  - [Freelancer Global Server Workaround v1.0](https://www.moddb.com/games/freelancer/downloads/freelancer-global-server-workaround-v10)
 - [Worldwave](https://github.com/Worldwave)
   - [Freelancer Space Suites Remaster](https://github.com/Freelancer-Sirius-Revival/FLSR/pull/497)
 - [XxSARGExX](https://github.com/XxSARGExX)
