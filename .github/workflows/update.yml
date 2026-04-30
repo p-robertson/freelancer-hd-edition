@@ -1,10 +1,10 @@
-name: Run FLStaticPatch
+name: Update TSR DLLs
 
 on: [push, workflow_dispatch]
 permissions:
   contents: write
 jobs:
-  patch:
+  update:
     runs-on: windows-latest
     if: ${{ github.actor != 'github-actions[bot]' && github.event_name != 'push' || github.event.pusher.name != 'github-actions[bot]' }}
     steps:
@@ -15,40 +15,32 @@ jobs:
           ref: ${{ github.ref }}
           token: ${{ secrets.PAT }}
           sparse-checkout: |
-            DLLS
             EXE
-            FLDOCS
 
-      - name: Checkout patch tool repo
+      - name: Checkout TSR repo
         uses: actions/checkout@v6
         with:
-          repository: FLHDE/FLStaticPatch
-          path: patching
+          repository: FLHDE/freelancer-text-strings-revision
+          path: tsr
 
-      - name: Checkout original binaries repo
-        uses: actions/checkout@v6
-        with:
-          repository: FLHDE/OriginalFLBinaries
-          path: og-binaries
-
-      - name: Replace binaries with originals
+      - name: Compile resource files
         run: |
-          del og-binaries\README.md
-          xcopy /s /y og-binaries freelancer-hd-edition
+          cd tsr
+          compile-tsr-hde.bat
+          cd ..
+        shell: cmd
 
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.13'
-
-      - name: Apply binary edits
-        run: python patching/FLStaticPatch.py freelancer-hd-edition/FLDOCS/BinaryEdits.patch freelancer-hd-edition
+      - name: Replace all resource DLLs
+        run: |
+          del tsr\output\script.xml
+          xcopy /s /y tsr\output freelancer-hd-edition
 
       - name: Push changes to branch
         run: |
           cd freelancer-hd-edition
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git diff --quiet && git diff --staged --quiet || git commit -am 'Apply binary edits [skip ci]'
+          git diff --quiet && git diff --staged --quiet || git commit -am 'Update TSR DLLs [skip ci]'
           git push
 
 concurrency:
