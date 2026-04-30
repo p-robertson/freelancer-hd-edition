@@ -88,7 +88,7 @@ Freelancer.exe 659be06fbbffd0b6cef48824471b94447ae5f65b. Base: Default No-CD EXE
 0E47B2: Hex 01 -> 00 = Disables the typing effect for the target name and sub-target name in the target view #7. ~adoxa
 0E47C6: Hex 01 -> 00 = Disables the typing effect for the target name and sub-target name in the target view #8. ~adoxa
 0E19C6: Hex 6A 00 -> EB 09 = Prevents the Request to Trade button from flickering when maximizing the HUD. ~BC46
-#12D279: Hex 90 90 90 90 90 90 90 -> 39 F1 74 03 30 C0 C3 = Prevent Countermeasure Droppers from being activated by right-clicking #1.* ~BC46 & Venemon
+12D279: Hex 90 90 90 90 90 90 90 -> 39 F1 74 03 30 C0 C3 = Prevent Countermeasure Droppers from being activated by right-clicking #1. ~BC46 & Venemon
 158A10: Hex BC -> C0 = Prevents intentional framerate drops to 25 from occurring during cutscenes. ~BC46 & FriendlyFire
 166C2B: Hex 75 -> EB = Bypasses the ESRB notice when entering the Multiplayer menu. ~adoxa
 16DDEC: UInt32 1271 -> 458775 = Changes the "VER. 1.0" text IDS in the bottom-right of the main menu to a custom version number IDS in hderesources.dll #1. ~BC46
@@ -105,7 +105,7 @@ Freelancer.exe 659be06fbbffd0b6cef48824471b94447ae5f65b. Base: Default No-CD EXE
 1D7964: Float32 3 -> 1.5 = Reduces the time between contact list refreshes. ~Dev
 1D7E50: Float64 0.8 -> 0.85 = Increases the width of the gauge bars. ~Dev
 1D8484: Float32 1 -> 0.1 = Reduces the time between weapon list refreshes. ~Fox
-#1DD5A8: Hex 80 -> 79 = Prevent Countermeasure Droppers from being activated by right-clicking #2.* ~BC46 & Venemon
+1DD5A8: Hex 80 -> 79 = Prevent Countermeasure Droppers from being activated by right-clicking #2. ~BC46 & Venemon
 1E6DCC: Hex 46 -> 00 = Changes the CreateMutex lpName parameter to an empty string, allowing multiple instances of Freelancer to run simultaneously. ~M0tah
 #214470: Hex 00 -> 01 = Enables top-down mode in the Target View by default.* ~BC46 & Whiskas
 #Freelancer.exe's default .ico was replaced so it has the "HDE" logo. Also a custom Manifest section has been added to make the game DPI-aware.
