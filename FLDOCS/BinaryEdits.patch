@@ -52,6 +52,7 @@ Freelancer.exe 659be06fbbffd0b6cef48824471b94447ae5f65b. Base: Default No-CD EXE
 #02477A: Hex CA 02 -> 00 00 = Removes window borders when Freelancer is running in a window #1.* ~adoxa & Laz
 #02490D: Hex CA 02 -> 00 00 = Removes window borders when Freelancer is running in a window #2.* ~adoxa & Laz
 02D7B8: Hex 6A 01 -> EB DD = Prevents sudden frame drops from occurring in space. Effectively removes Sleep(1) from the delta time calculation. ~BC46
+03E732: Hex 74 21 -> EB 1D = Prevents the base-side location frame from flickering when opening the dealer menu with transition scripts disabled. ~BC46
 #05685F: Hex 8A 50 -> EB 0C = Skip story cinematics (excluding space cutscenes) with the Esc key, like in the FL Beta.* ~BC46
 0691D1: Int8 32 -> 127 = Increases the maximum number of chat lines in the chat history window. ~M0tah
 06A440: Int8 80 -> 127 = Increases the maximum number of characters in the chat input box. ~M0tah
