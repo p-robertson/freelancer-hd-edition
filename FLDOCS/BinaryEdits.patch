@@ -121,6 +121,8 @@ rp8.dll fbf6985e396ab37fe95689dd39f9fbced37b3aad. Base: Default from Freelancer 
 
 Server.dll b98e932306de6d1924ac52b464f660cc1949587b. Base: Default from the official 1.1 Freelancer patch.
 00960C: Hex 0C -> 00 = Fixes an issue that causes explosions to not deal full damage (or any damage at all) to large ships and bases. ~M0tah
+02426B: Hex E8 E0 BE 05 00 89 44 -> 0F 1F 44 00 00 D9 5C = Fixes the server not reading empty_cube_frequency values correctly #1. ~Aingar & BC46
+0242BB: Hex DB -> D9 = Fixes the server not reading empty_cube_frequency values correctly #2. ~Aingar & BC46
 06E10D: Hex E4 B4 -> 14 B3 = Disables the encryption of save game files when created and saved. ~adoxa
 07399D: Hex E4 B4 -> 14 B3 = Disables the encryption of the Restart.fl file when created. ~adoxa
 
