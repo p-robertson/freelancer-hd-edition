@@ -1,4 +1,4 @@
-#This file documents the hex edits that have been made to various binary files in Freelancer.
+#This file documents the hex edits that have been made to various binary files from Freelancer.
 #
 #All hex edits listed are automatically applied using FLStaticPatch: https://github.com/FLHDE/FLStaticPatch
 #The original binary files can be found here: https://github.com/FLHDE/OriginalFLBinaries
@@ -10,7 +10,7 @@
 #
 #To apply a new binary patch, simply add an entry to this file using the same syntax as the existing entries.
 #After the changes have been pushed, the binary patch will be automatically applied in a subsequent commit.
-#Alternatively, the binary patch can be applied by manually by running the FLStaticPatch tool locally.
+#Alternatively, the binary patch can be applied by running the FLStaticPatch tool locally.
 #
 Common.dll 99fbba9aaf30299857838c6c3b7443a804e860d3. Base: Default from the official 1.1 Freelancer patch.
 0638AC: Hex 7B -> EB = Removes the maximum docking initiation distance. ~BC46
@@ -46,6 +46,7 @@ FLServer.exe a5f5ce8e44e3c6dcea0af52e59bf9fcfc9d1460b. Base: Default from the of
 #A custom Manifest section has been added to make the program DPI-aware.
 
 Freelancer.exe 659be06fbbffd0b6cef48824471b94447ae5f65b. Base: Default No-CD EXE.
+00014E: Hex 0F -> 2F = Allows Freelancer to use 4 GB of virtual memory instead of 2 GB. ~BC46
 01AD6F: Hex 80 00 -> 00 20 = Fixes a bug with low resolution textures on some systems. ~Schmackbolzen
 0244F7: Hex B8 89 5C -> F8 EB 5D = Gamma ranges from 0.75 to 1.75, not 1.0 to 2.0. ~BC46 & adoxa
 #02477A: Hex CA 02 -> 00 00 = Removes window borders when Freelancer is running in a window #1.* ~adoxa & Laz
