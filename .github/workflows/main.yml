@@ -1,4 +1,4 @@
-name: Build Pipeline
+name: Update FLHook
 on:
   push:
     branches:
@@ -74,3 +74,6 @@ jobs:
           git add .github/workflows/flhooktag
           git commit -m "Update FLHook to $env:TAG"
           git push
+
+concurrency:
+  group: push-${{ github.ref }}

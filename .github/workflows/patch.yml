@@ -49,3 +49,6 @@ jobs:
           git add .
           git diff --quiet && git diff --staged --quiet || git commit -am 'Apply binary edits'
           git push
+
+concurrency:
+  group: push-${{ github.ref }}
