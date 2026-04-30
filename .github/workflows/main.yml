@@ -75,5 +75,5 @@ jobs:
           git commit -m "Update FLHook to $env:TAG [skip ci]"
           git push
 
-concurrency:
-  group: push-${{ github.ref }}
+#concurrency:
+#  group: push-${{ github.ref }}

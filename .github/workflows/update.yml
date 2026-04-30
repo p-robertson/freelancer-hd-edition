@@ -1,8 +1,14 @@
-name: Update TSR DLLs
+name: Update dependencies
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   update:
     runs-on: windows-latest
@@ -15,7 +21,33 @@ jobs:
           ref: ${{ github.ref }}
           token: ${{ secrets.PAT }}
           sparse-checkout: |
+            DLLS
             EXE
+            FLDOCS
+
+      - name: Checkout patch tool repo
+        uses: actions/checkout@v6
+        with:
+          repository: FLHDE/FLStaticPatch
+          path: patching
+
+      - name: Checkout original binaries repo
+        uses: actions/checkout@v6
+        with:
+          repository: FLHDE/OriginalFLBinaries
+          path: og-binaries
+
+      - name: Replace binaries with originals
+        run: |
+          del og-binaries\README.md
+          xcopy /s /y og-binaries freelancer-hd-edition
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Apply binary edits
+        run: python patching/FLStaticPatch.py freelancer-hd-edition/FLDOCS/BinaryEdits.patch freelancer-hd-edition
 
       - name: Checkout TSR repo
         uses: actions/checkout@v6
@@ -23,14 +55,14 @@ jobs:
           repository: FLHDE/freelancer-text-strings-revision
           path: tsr
 
-      - name: Compile resource files
+      - name: Compile FRC files
         run: |
           cd tsr
           compile-tsr-hde.bat
           cd ..
         shell: cmd
 
-      - name: Replace all resource DLLs
+      - name: Replace resource DLLs
         run: |
           del tsr\output\script.xml
           xcopy /s /y tsr\output freelancer-hd-edition
@@ -40,8 +72,9 @@ jobs:
           cd freelancer-hd-edition
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git diff --quiet && git diff --staged --quiet || git commit -am 'Update TSR DLLs [skip ci]'
+          git diff --quiet && git diff --staged --quiet || git commit -am 'Update dependencies [skip ci]' -m 'Applied binary patches with FLStaticPatch and added the latest TSR resource DLLs.'
           git push
 
 concurrency:
   group: push-${{ github.ref }}
+  cancel-in-progress: true
