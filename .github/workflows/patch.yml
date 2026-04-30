@@ -12,6 +12,7 @@ jobs:
         with:
           path: freelancer-hd-edition
           ref: ${{ github.ref }}
+          token: ${{ secrets.PAT }}
           sparse-checkout: |
             DLLS
             EXE
