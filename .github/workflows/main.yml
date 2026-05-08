@@ -75,5 +75,6 @@ jobs:
           git commit -m "Update FLHook to $env:TAG [skip ci]"
           git push
 
+# TODO: If enabled, this workflow will conflict with the one from update.yml.
 #concurrency:
 #  group: push-${{ github.ref }}
