@@ -112,8 +112,6 @@ Have something to contribute to make the mod even better? Feel free to create a 
   - [flplusplus plugin](https://github.com/FLHDE/flplusplus)
 - [crosire](https://github.com/crosire)
   - [ReShade](https://reshade.me/)
-- [Daniel Stenberg](https://github.com/bagder)
-  - [libcurl](https://github.com/curl/curl)
 - [DAVENAT0R](https://www.moddb.com/members/davenator1)
   - [Flat Interface](https://www.moddb.com/games/freelancer/addons/freelancer-flat-interface)
   - [Flat UI Icons V2](https://www.moddb.com/games/freelancer/addons/flat-ui-icons-v2)
@@ -135,7 +133,7 @@ Have something to contribute to make the mod even better? Feel free to create a 
 - [Elisha Riedlinger](https://github.com/elishacloud)
   - [DxWrapper](https://github.com/elishacloud/dxwrapper)
 - [FireFlyEx](https://github.com/fireflyex)
-  - [Freelancer SDK/QuickFix](https://swat-portal.com/forum/filebase/file/619-freelancer-quickfix-1-0c/) *(included in Jason's Freelancer Patch)*
+  - [Freelancer SDK/QuickFix](http://lancersreactor.org/filebase/index.php?file/619-freelancer-quickfix-1-0c/) *(included in Jason's Freelancer Patch)*
   - Storyline loadout fixes
   - Patrol path fixes
 - [Freestalker.fl](https://github.com/Freestalkerdotfr)
